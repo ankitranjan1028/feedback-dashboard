@@ -141,7 +141,6 @@ form-builder-platform/
    PORT=5000
    MONGODB_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret_key
-   NODE_ENV=development
    CLIENT_URL=http://localhost:3000
    ```
 
