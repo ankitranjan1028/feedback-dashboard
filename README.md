@@ -79,6 +79,22 @@ This platform streamlines the process of creating, distributing, and analyzing f
 
 ```
 form-builder-platform/
+
+└── client/                   # Frontend application
+    ├── package.json
+    ├── tailwind.config.js
+    ├── public/
+    │   └── index.html
+    └── src/
+        ├── components/       # Reusable UI components
+        ├── pages/           # Route components
+        ├── context/         # React Context providers
+        ├── hooks/           # Custom React hooks
+        ├── utils/           # Utility functions
+        ├── api/             # API service layer
+        ├── App.js
+        └── index.js
+
 ├── server/                    # Backend application
 │   ├── package.json
 │   ├── index.js              # Server entry point
@@ -99,20 +115,7 @@ form-builder-platform/
 │       ├── auth.js
 │       ├── forms.js
 │       └── responses.js
-└── client/                   # Frontend application
-    ├── package.json
-    ├── tailwind.config.js
-    ├── public/
-    │   └── index.html
-    └── src/
-        ├── components/       # Reusable UI components
-        ├── pages/           # Route components
-        ├── context/         # React Context providers
-        ├── hooks/           # Custom React hooks
-        ├── utils/           # Utility functions
-        ├── api/             # API service layer
-        ├── App.js
-        └── index.js
+
 ```
 
 ---
@@ -177,62 +180,6 @@ The application will be available at `http://localhost:3000` with the API runnin
 
 ---
 
-## 🌐 Deployment Guide
-
-### Backend Deployment (Render/Railway)
-
-1. **Prepare your repository**
-   - Ensure your code is pushed to GitHub
-   - Add a `start` script in `server/package.json`
-
-2. **Deploy to Render**
-   - Create a new Web Service
-   - Connect your GitHub repository
-   - Set build command: `cd server && npm install`
-   - Set start command: `cd server && npm start`
-   - Configure environment variables
-
-3. **Environment Variables**
-   ```
-   PORT=5000
-   MONGODB_URI=your_production_mongodb_uri
-   JWT_SECRET=your_production_jwt_secret
-   NODE_ENV=production
-   CLIENT_URL=your_frontend_url
-   ```
-
-### Frontend Deployment (Vercel)
-
-1. **Connect to Vercel**
-   - Import your project from GitHub
-   - Set root directory to `client`
-   - Vercel will auto-detect React configuration
-
-2. **Environment Variables**
-   ```
-   REACT_APP_API_BASE_URL=your_backend_url/api
-   ```
-
-3. **Build Settings**
-   - Build command: `npm run build`
-   - Output directory: `build`
-
----
-
-## 🎯 Development Philosophy
-
-### Architecture Decisions
-- **Separation of Concerns**: Clear distinction between client and server responsibilities
-- **Modular Design**: Component-based architecture for maintainability and reusability
-- **API-First Approach**: RESTful API design that can support multiple clients
-- **State Management**: Context API for global state, local state for component-specific data
-
-### User-Centric Design
-- **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
-- **Performance**: Optimized bundle size and lazy loading for better user experience
-- **Responsive Design**: Mobile-first approach ensuring great experience across all devices
-- **Progressive Enhancement**: Graceful degradation for older browsers
-
 ### Security Best Practices
 - **Input Validation**: Both client and server-side validation
 - **Authentication**: Secure JWT implementation with proper token management
@@ -273,25 +220,3 @@ We welcome contributions! Please follow these guidelines:
 5. Open a Pull Request
 
 ---
-
-## 📝 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## 🆘 Support
-
-If you encounter any issues or have questions:
-- Check the [Issues](../../issues) page
-- Create a new issue with detailed information
-- Contact the development team
-
----
-
-## 🔄 Version History
-
-- **v1.0.0** - Initial release with core functionality
-- **v1.1.0** - Added CSV export and enhanced analytics
-- **v1.2.0** - Mobile responsiveness improvements
-- **v1.3.0** - Dark theme support and UI enhancements
