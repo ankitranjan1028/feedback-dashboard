@@ -67,12 +67,6 @@ This platform streamlines the process of creating, distributing, and analyzing f
 - **CORS** - Cross-origin resource sharing
 - **Papa Parse** - CSV parsing and generation
 
-### Development & Deployment
-- **Vercel** - Frontend hosting and deployment
-- **Render/Railway** - Backend hosting and deployment
-- **MongoDB Atlas** - Cloud database service
-- **Git** - Version control and collaboration
-
 ---
 
 ## 📁 Project Architecture
@@ -132,7 +126,7 @@ form-builder-platform/
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repository-url>
+   git clone //github.com/ankitranjan1028/feedback-dashboard.git
    cd form-builder-platform
    ```
 
