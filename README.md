@@ -127,7 +127,7 @@ form-builder-platform/
 1. **Clone the repository**
    ```bash
    git clone //github.com/ankitranjan1028/feedback-dashboard.git
-   cd form-builder-platform
+   cd feedback-dashboard
    ```
 
 2. **Server Setup**
